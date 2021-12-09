@@ -1,11 +1,11 @@
 # vue-lesson
 
 ## node 설치
-```shell
+```
 $ sudo apt update
 $ sudo apt install nodejs ## node download
 $ nodejs -v ## read version
-$ sudo apt install npm ##npm(node manager) download
+$ sudo apt install npm ## npm(node manager) download
 ```
 
 ## git 설치
