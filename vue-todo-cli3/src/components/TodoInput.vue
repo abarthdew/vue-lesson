@@ -1,7 +1,10 @@
 <template>
   <div>
-    <input type="text" v-model="newTodoItem"/>
-    <button v-on:click="addTodo">add</button>
+    <!-- v-model: two way binding -->
+    <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo" />
+    <button v-on:click="addTodo">
+      <i class="fa fa-plus"></i>
+    </button>
   </div>
 </template>
 
@@ -9,7 +12,7 @@
   export default {
     data: function () {
       return {
-        newTodoItem: "",
+        newTodoItem: '',
       }
     },
     methods: {
@@ -17,9 +20,11 @@
         console.log(this.newTodoItem);
         // save
         localStorage.setItem(this.newTodoItem, this.newTodoItem);
-        // input reset
-        this.newTodoItem = '';
+        this.clearInput();
+      },
+      clearInput: function() {
+        this.newTodoItem = ''; // reset input
       }
-    }
+    },
   }
 </script>
