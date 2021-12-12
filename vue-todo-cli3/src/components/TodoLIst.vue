@@ -1,7 +1,12 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in todoItem" :key="item">{{item}}</li>
+      <li v-for="(item, index) in todoItem" :key="item" style="margin: 10px;">
+        {{item}}
+        <button @click="removeTodo(item, index)">
+          <i class="fa-trash-alt fas"></i>
+        </button>
+      </li>
     </ul>
   </div>
 </template>
@@ -21,6 +26,13 @@ export default {
         console.log(localStorage.key(i));
         }
       }
+    }
+  },
+  methods: {
+    removeTodo(item, index) {
+      localStorage.removeItem(item);
+      this.todoItem.splice(index, 1); // delete from (index) to (1)
+      console.log(item, index);
     }
   }
 }
