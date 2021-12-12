@@ -55,6 +55,14 @@ $ jonah@jonah-15U530-LH10K:~$ sudo chown -R jonah:jonah /usr/local/lib/node_modu
 $ jonah@jonah-15U530-LH10K:~$ sudo chown -R jonah *
 ```
 
+## git branch 삭제 후 github에 남겨져 있는 branch 제거
+```cmd
+// remove branch
+$ git branch -d [branch_name]
+// remove github branch
+$ git push -d origin [removed_branch_name]
+```
+
 ## Reference
 - https://www.notion.so/vue-lesson-bb01133a21e94a969b42f1a82f8c24c7
 - https://velog.io/@ywoosang/Node.js-%EC%84%A4%EC%B9%98
