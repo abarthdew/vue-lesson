@@ -57,9 +57,9 @@ $ jonah@jonah-15U530-LH10K:~$ sudo chown -R jonah *
 
 ## git branch 삭제 후 github에 남겨져 있는 branch 제거
 ```cmd
-// remove branch
+## remove branch
 $ git branch -d [branch_name]
-// remove github branch
+## remove github branch
 $ git push -d origin [removed_branch_name]
 ```
 
