@@ -18,9 +18,13 @@
     methods: {
       addTodo: function () {
         console.log(this.newTodoItem);
+        if (this.newTodoItem !== '') {
         // save
-        localStorage.setItem(this.newTodoItem, this.newTodoItem);
+        var obj = {completed: false, item: this.newTodoItem}
+        localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
+        // JSON.stringify : obj(object) to string
         this.clearInput();
+        }
       },
       clearInput: function() {
         this.newTodoItem = ''; // reset input
