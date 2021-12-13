@@ -40,7 +40,7 @@ $ root@jonah-15U530-LH10K:/home/jonah/Documents/vue-lesson# vue create vue-todo-
 ## npm run serve
 ```
 
-## vue create 오류 시$ 
+## vue create 오류 시
 ```shell
 ## 로컬 터미널 열어서 명령어 입력하고
 $ jonah@jonah-15U530-LH10K:~$ sudo -i
