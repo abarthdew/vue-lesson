@@ -1,8 +1,15 @@
 <template>
   <div>
     <ul>
-      <li v-for="(todoItem, index) in todoItem" :key="todoItem.item" style="margin: 10px;">
-        <i class="fas fa-check" @click="toggleComplete"></i>
+      <li 
+        v-for="(todoItem, index) in todoItem"
+        :key="todoItem.item"
+        style="margin: 10px;"
+        :class="{checkBtn: todoItem.completed}">
+        <button
+          class="fas fa-check"
+          @click="toggleComplete(todoItem, index)">
+        </button>
         {{todoItem.item}}
         <button @click="removeTodo(todoItem, index)">
           <i class="fa-trash-alt fas"></i>
@@ -35,9 +42,20 @@ export default {
       this.todoItem.splice(index, 1); // delete from (index) to (1)
       console.log(todoItem, index);
     },
-    toggleComplete() {
-
+    toggleComplete(todoItem, index) {
+      // toggle
+      todoItem.completed = !todoItem.completed;
+      // update todoItem
+      localStorage.removeItem(todoItem.item);
+      localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+      console.log(todoItem, index);
     }
   }
 }
 </script>
+
+<style scoped>
+.checkBtn {
+  background: #ddd;
+}
+</style>
