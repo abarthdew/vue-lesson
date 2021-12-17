@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <todo-header></todo-header>
-    <todo-input/>
-    <todo-list :propsData="todoItem" />
+    <todo-input @addTodoItem="addOneItem"/> <!-- when press the button in TodoInput, push that event at app.vue -->
+    <todo-list :propsData="todoItems" />
     <todo-footer></todo-footer>
   </div>
 </template>
@@ -23,19 +23,29 @@ export default {
   },
   data() {
     return {
-      todoItem: [],
+      todoItems: [],
     }
   },
   created() {
     if (localStorage.length > 0) {
       for (var i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
-        this.todoItem.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+        this.todoItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
         console.log(localStorage.getItem(localStorage.key(i)));
         }
       }
     }
   },
+  methods: {
+    addOneItem (todoItem) {
+      // save
+      var obj = {completed: false, item: todoItem}
+      // JSON.stringify : obj(object) to string
+      localStorage.setItem(todoItem, JSON.stringify(obj));
+      // push object
+      this.todoItems.push(obj);
+    }
+  }
 }
 </script>
 
