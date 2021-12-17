@@ -21,10 +21,10 @@
 
 <script>
 export default {
-  props: ['propsData'],
-  // props: {
-  //   propsData: Array,
-  // },
+  // props: ['propsData'], // another way
+  props: {
+    propsData: Array,
+  },
   methods: {
     removeTodo(todoItem, index) {
       localStorage.removeItem(todoItem);

@@ -19,10 +19,9 @@
       addTodo: function () {
         console.log(this.newTodoItem);
         if (this.newTodoItem !== '') {
-        // save
-        var obj = {completed: false, item: this.newTodoItem}
-        localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
-        // JSON.stringify : obj(object) to string
+        // emit to app.vue
+        this.$emit('addTodoItem', this.newTodoItem);
+        // clear
         this.clearInput();
         }
       },
