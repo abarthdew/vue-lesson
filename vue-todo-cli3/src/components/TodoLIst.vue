@@ -27,17 +27,10 @@ export default {
   },
   methods: {
     removeTodo(todoItem, index) {
-      localStorage.removeItem(todoItem);
-      this.todoItem.splice(index, 1); // delete from (index) to (1)
-      console.log(todoItem, index);
+      this.$emit('removeItem', todoItem, index);
     },
     toggleComplete(todoItem, index) {
-      // toggle
-      todoItem.completed = !todoItem.completed;
-      // update todoItem
-      localStorage.removeItem(todoItem.item);
-      localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
-      console.log(todoItem, index);
+      this.$emit('toggleCompleteItem', todoItem, index);
     }
   }
 }

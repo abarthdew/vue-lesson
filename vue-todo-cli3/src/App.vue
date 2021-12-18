@@ -2,7 +2,11 @@
   <div id="app">
     <todo-header></todo-header>
     <todo-input @addTodoItem="addOneItem"/> <!-- when press the button in TodoInput, push that event at app.vue -->
-    <todo-list :propsData="todoItems" />
+    <todo-list
+      :propsData="todoItems"
+      @removeItem="removeOneItem"
+      @toggleCompleteItem="toggleCompleteOneItem"
+    />
     <todo-footer></todo-footer>
   </div>
 </template>
@@ -44,6 +48,19 @@ export default {
       localStorage.setItem(todoItem, JSON.stringify(obj));
       // push object
       this.todoItems.push(obj);
+    },
+    removeOneItem (todoItem, index) {
+      localStorage.removeItem(todoItem);
+      this.todoItems.splice(index, 1); // delete from (index) to (1)
+      console.log(todoItem, index);
+    },
+    toggleCompleteOneItem (todoItem, index) {
+      // toggle
+      todoItem.completed = !todoItem.completed;
+      // update todoItem
+      localStorage.removeItem(todoItem.item);
+      localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+      console.log(todoItem, index);
     }
   }
 }
