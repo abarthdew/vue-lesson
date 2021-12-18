@@ -50,9 +50,9 @@ export default {
       this.todoItems.push(obj);
     },
     removeOneItem (todoItem, index) {
-      localStorage.removeItem(todoItem);
+      console.log(todoItem);
+      localStorage.removeItem(todoItem.item);
       this.todoItems.splice(index, 1); // delete from (index) to (1)
-      console.log(todoItem, index);
     },
     toggleCompleteOneItem (todoItem, index) {
       // toggle
