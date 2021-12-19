@@ -8,7 +8,7 @@
         :class="{checkBtn: todoItem.completed}">
         <button
           class="fas fa-check"
-          @click="toggleComplete(todoItem, index)">
+          @click="toggleComplete(index)">
         </button>
         {{todoItem.item}}
         <button @click="removeTodo(todoItem, index)">
@@ -29,8 +29,8 @@ export default {
     removeTodo(todoItem, index) {
       this.$emit('removeItem', todoItem, index);
     },
-    toggleComplete(todoItem, index) {
-      this.$emit('toggleCompleteItem', todoItem, index);
+    toggleComplete(index) {
+      this.$emit('toggleCompleteItem', index);
     }
   }
 }

@@ -54,13 +54,14 @@ export default {
       localStorage.removeItem(todoItem.item);
       this.todoItems.splice(index, 1); // delete from (index) to (1)
     },
-    toggleCompleteOneItem (todoItem, index) {
+    toggleCompleteOneItem (index) {
+      const todoItem = this.todoItems[index];
+      console.log(todoItem);
       // toggle
       todoItem.completed = !todoItem.completed;
       // update todoItem
       localStorage.removeItem(todoItem.item);
       localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
-      console.log(todoItem, index);
     }
   }
 }
