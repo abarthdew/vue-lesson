@@ -1,40 +1,47 @@
 <template>
   <div>
-    <!-- v-model: two way binding -->
     <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo" />
     <button v-on:click="addTodo">
       <i class="fa fa-plus"></i>
     </button>
     <modal v-if="showModal" @close="showModal = false">
-      <h3 slot="header">custom header</h3>
+      <!--
+      *** you can use custom content here to overwrite
+      default content ***
+      -->
+      <h3 slot="header">custom header<!--Not "default header" in Modal.vue--></h3>
+      <h3 slot="body">custom body<!--Not "default body" in Modal.vue--></h3>
+      <h3 slot="footer">custom footer<!--Not "default footer" in Modal.vue--></h3>
+      <!-- slot: refactoring  specific component or any part. so, you may reuse UI parts in any compnent-->
     </modal>
   </div>
 </template>
 
 <script>
 import Modal from './common/Modal.vue';
-
   export default {
-    data: function () {
+    component: {
+      Modal,
+    },
+    data() {
       return {
         newTodoItem: '',
         showModal: false,
       }
     },
-    component: {
-      Modal,
-    },
     methods: {
-      addTodo: function () {
+      addTodo() {
         console.log(this.newTodoItem);
         if (this.newTodoItem !== '') {
         // emit to app.vue
         this.$emit('addTodoItem', this.newTodoItem);
         // clear
         this.clearInput();
+        } else {
+          this.showModal = !this.showModal;
         }
       },
-      clearInput: function() {
+      clearInput() {
         this.newTodoItem = ''; // reset input
       }
     },
