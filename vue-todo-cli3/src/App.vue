@@ -41,7 +41,7 @@ export default {
     }
   },
   methods: {
-    addOneItem (todoItem) {
+    addOneItem(todoItem) {
       // save
       var obj = {completed: false, item: todoItem}
       // JSON.stringify : obj(object) to string
@@ -49,7 +49,7 @@ export default {
       // push object
       this.todoItems.push(obj);
     },
-    removeOneItem (todoItem, index) {
+    removeOneItem(todoItem, index) {
       console.log(todoItem);
       localStorage.removeItem(todoItem.item);
       this.todoItems.splice(index, 1); // delete from (index) to (1)
