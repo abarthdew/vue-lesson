@@ -20,7 +20,7 @@
 <script>
 import Modal from './common/Modal.vue';
   export default {
-    component: {
+    components: {
       Modal,
     },
     data() {
