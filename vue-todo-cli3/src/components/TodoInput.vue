@@ -5,15 +5,24 @@
     <button v-on:click="addTodo">
       <i class="fa fa-plus"></i>
     </button>
+    <modal v-if="showModal" @close="showModal = false">
+      <h3 slot="header">custom header</h3>
+    </modal>
   </div>
 </template>
 
 <script>
+import Modal from './common/Modal.vue';
+
   export default {
     data: function () {
       return {
         newTodoItem: '',
+        showModal: false,
       }
+    },
+    component: {
+      Modal,
     },
     methods: {
       addTodo: function () {
