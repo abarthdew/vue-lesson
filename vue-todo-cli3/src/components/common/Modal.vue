@@ -23,7 +23,7 @@
                     OK
                   </button>
                 </slot>
-                <!--THIS slot PART: you can refactor this <slot>part</slot> on TodoInput.vue(where it is slot implemented)-->
+                <!--THIS slot PART: you can refactor this <slot>part</slot> on TodoInput.vue(where slot implemented)-->
               </div>
             </div>
           </div>
