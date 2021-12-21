@@ -20,7 +20,7 @@ import TodoList from './components/TodoLIst.vue'
 export default {
   name: 'App',
   components: {
-    TodoFooter: TodoFooter, // difference between expression
+    TodoFooter,
     TodoHeader,
     TodoInput,
     TodoList,
