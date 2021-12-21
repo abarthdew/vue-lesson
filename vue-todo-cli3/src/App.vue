@@ -32,7 +32,7 @@ export default {
   },
   created() {
     if (localStorage.length > 0) {
-      for (var i = 0; i < localStorage.length; i++) {
+      for (let i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
         this.todoItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
         console.log(localStorage.getItem(localStorage.key(i)));
@@ -43,7 +43,7 @@ export default {
   methods: {
     addOneItem(todoItem) {
       // save
-      var obj = {completed: false, item: todoItem}
+      const obj = {completed: false, item: todoItem}
       // JSON.stringify : obj(object) to string
       localStorage.setItem(todoItem, JSON.stringify(obj));
       // push object
