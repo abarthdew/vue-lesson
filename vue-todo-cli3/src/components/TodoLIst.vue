@@ -21,7 +21,6 @@
 
 <script>
 export default {
-  // props: ['propsData'], // another way
   props: {
     propsData: Array,
   },
