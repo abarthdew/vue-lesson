@@ -34,18 +34,15 @@ import Modal from './common/Modal.vue';
     },
     methods: {
       addTodo() {
-        console.log(this.newTodoItem);
         if (this.newTodoItem !== '') {
-        // emit to app.vue
-        this.$emit('addTodoItem', this.newTodoItem);
-        // clear
-        this.clearInput();
+          this.$store.commit('addOneItem', this.newTodoItem);
+          this.clearInput();
         } else {
           this.showModal = !this.showModal;
         }
       },
       clearInput() {
-        this.newTodoItem = ''; // reset input
+        this.newTodoItem = '';
       },
       closeModal() {
         this.showModal = false;
