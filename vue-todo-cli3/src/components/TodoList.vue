@@ -11,7 +11,7 @@
           @click="toggleComplete(index)">
         </button>
         {{todoItem.item}}
-        <button @click="removeTodo({ todoItem, index })">
+        <button @click="removeTodo(todoItem, index)">
           <i class="fa-trash-alt fas"></i>
         </button>
       </li>
@@ -27,11 +27,14 @@ export default {
     ...mapGetters({
       storedTodoItems: 'storedTodoItems'
     }),
+    ...mapMutations({
+      removeOneItem: 'removeOneItem'
+    }),
   },
   methods: {
-    ...mapMutations({
-      removeTodo: 'removeOneItem' // -> removeTodo: 'removeOneItem(todoItem, index)'
-    }),
+    removeTodo(todoItem, index) {
+      this.$store.commit('removeOneItem', { todoItem, index });
+    },
     toggleComplete(index) {
       this.$store.commit('toggleCompleteOneItem', index);
     }
