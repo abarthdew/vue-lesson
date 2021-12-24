@@ -20,11 +20,15 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
+
 export default {
   computed: {
     ...mapGetters({
       storedTodoItems: 'storedTodoItems'
+    }),
+    ...mapMutations({
+      removeOneItem: 'removeOneItem'
     }),
   },
   methods: {
