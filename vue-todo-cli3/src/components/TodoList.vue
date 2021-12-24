@@ -23,8 +23,9 @@
 import { mapGetters } from 'vuex';
 export default {
   computed: {
-    ...mapGetters(['storedTodoItems']),
-    // ...mapGetters({'storedTodoItems'}), // different Getters name between Store and used Component
+    ...mapGetters({
+      storedTodoItems: 'storedTodoItems'
+    }),
   },
   methods: {
     removeTodo(todoItem, index) {
