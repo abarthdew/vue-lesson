@@ -22,6 +22,11 @@ export const store = new Vuex.Store({ // expoer store : any component can use th
         headerText: 'TODO it!',
         todoItems: storage.fetch(),
     },
+    getters: {
+        storedTodoItems(state) {
+            return state.todoItems;
+        }
+    },
     mutations: {
         addOneItem(state, todoItem) {
             const obj = {completed: false, item: todoItem}
