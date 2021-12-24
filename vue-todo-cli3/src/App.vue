@@ -3,7 +3,7 @@
     <todo-header></todo-header>
     <todo-input/>
     <todo-list/>
-    <todo-footer @clearAll="clearAllItems"></todo-footer>
+    <todo-footer/>
   </div>
 </template>
 
@@ -19,11 +19,6 @@ export default {
     TodoHeader,
     TodoInput,
     TodoList,
-  },
-  methods: {
-    clearAllItems() {
-      this.$store.commit('clearAllItems');
-    }
   }
 }
 </script>
