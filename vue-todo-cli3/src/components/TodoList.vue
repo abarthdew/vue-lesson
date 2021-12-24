@@ -8,10 +8,10 @@
         :class="{checkBtn: todoItem.completed}">
         <button
           class="fas fa-check"
-          @click="toggleComplete(index)">
+          @click="toggleCompleteOneItem(index)">
         </button>
         {{todoItem.item}}
-        <button @click="removeTodo(todoItem, index)">
+        <button @click="removeOneItem({todoItem, index})">
           <i class="fa-trash-alt fas"></i>
         </button>
       </li>
@@ -27,17 +27,12 @@ export default {
     ...mapGetters({
       storedTodoItems: 'storedTodoItems'
     }),
-    ...mapMutations({
-      removeOneItem: 'removeOneItem'
-    }),
   },
   methods: {
-    removeTodo(todoItem, index) {
-      this.$store.commit('removeOneItem', { todoItem, index });
-    },
-    toggleComplete(index) {
-      this.$store.commit('toggleCompleteOneItem', index);
-    }
+    ...mapMutations({
+      removeOneItem: 'removeOneItem',
+      toggleCompleteOneItem: 'toggleCompleteOneItem',
+    }),
   }
 }
 </script>
