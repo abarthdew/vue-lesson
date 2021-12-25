@@ -12,41 +12,35 @@ const storage = {
     },
 }
 
-const state = {
-    headerText: 'TODO it!',
-    todoItems: storage.fetch(),
-}
-
-const getters = {
-    storedTodoItems: (state) => {
-        return state.todoItems;
+export default {
+    state: {
+        headerText: 'TODO it!',
+        todoItems: storage.fetch(),
     },
-}
-
-const mutations = {
-    addOneItem: (state, todoItem) => {
-        const obj = {completed: false, item: todoItem}
-        localStorage.setItem(todoItem, JSON.stringify(obj));
-        state.todoItems.push(obj);
+    getters: {
+        storedTodoItems(state) {
+            return state.todoItems;
+        },
     },
-    removeOneItem: (state, payload) => {
-        localStorage.removeItem(payload.todoItem.item);
-        state.todoItems.splice(payload.index, 1);
+    mutations: {
+        addOneItem(state, todoItem) {
+            const obj = {completed: false, item: todoItem}
+            localStorage.setItem(todoItem, JSON.stringify(obj));
+            state.todoItems.push(obj);
+        },
+        removeOneItem(state, payload) {
+            localStorage.removeItem(payload.todoItem.item);
+            state.todoItems.splice(payload.index, 1);
+        },
+        toggleCompleteOneItem(state, index) {
+            const todoItem = state.todoItems[index];
+            todoItem.completed = !todoItem.completed;
+            localStorage.removeItem(todoItem.item);
+            localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+        },
+        clearAllItems(state) {
+            localStorage.clear();
+            state.todoItems = [];
+        },
     },
-    toggleCompleteOneItem: (state, index) => {
-        const todoItem = state.todoItems[index];
-        todoItem.completed = !todoItem.completed;
-        localStorage.removeItem(todoItem.item);
-        localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
-    },
-    clearAllItems: (state) => {
-        localStorage.clear();
-        state.todoItems = [];
-    },
-}
-
-export default { 
-    state, 
-    getters, 
-    mutations,
 }
