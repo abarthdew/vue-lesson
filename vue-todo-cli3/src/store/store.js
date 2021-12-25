@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { getters } from './getters'
+import { mutations } from './mutations';
 
 Vue.use(Vuex); // use vue plugin
 
@@ -22,30 +24,6 @@ export const store = new Vuex.Store({ // expoer store : any component can use th
         headerText: 'TODO it!',
         todoItems: storage.fetch(),
     },
-    getters: {
-        storedTodoItems(state) {
-            return state.todoItems;
-        }
-    },
-    mutations: {
-        addOneItem(state, todoItem) {
-            const obj = {completed: false, item: todoItem}
-            localStorage.setItem(todoItem, JSON.stringify(obj));
-            state.todoItems.push(obj);
-        },
-        removeOneItem(state, payload) {
-            localStorage.removeItem(payload.todoItem.item);
-            state.todoItems.splice(payload.index, 1);
-        },
-        toggleCompleteOneItem (state, index) {
-            const todoItem = state.todoItems[index];
-            todoItem.completed = !todoItem.completed;
-            localStorage.removeItem(todoItem.item);
-            localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
-        },
-        clearAllItems(state) {
-            localStorage.clear();
-            state.todoItems = [];
-        }
-    }
+    getters: getters,
+    mutations: mutations,
 });
