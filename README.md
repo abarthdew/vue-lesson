@@ -2,7 +2,7 @@
 
 ## 강의에서 다루는 내용
 
-![Untitled](vue-todo-cli3/vue-todo-cli3/src/assets/vue-lesson(1).png)
+![Untitled](https://github.com/abarthdew/vue-lesson/blob/main/vue-todo-cli3/src/assets/vue-lesson(1).png)
 
 ## 실습 미리보기
 
