@@ -2,17 +2,17 @@
 
 ## 강의에서 다루는 내용
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e63c8b8a-ae62-4542-8027-4b264671863f/Untitled.png)
+![Untitled](vue-todo-cli3/vue-todo-cli3/src/assets/vue-lesson(1).png)
 
 ## 실습 미리보기
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44c492b7-7186-4c2e-8db2-6329f6a6171f/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2e2cb5c3-44c0-44ba-8103-c2a341c137ce/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## 개발환경 `+ubuntu`
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3120015-1143-4c63-b9ee-5a96d7a5ef7a/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## node 설치
 
@@ -37,7 +37,7 @@ sudo apt install git-all
 
 ## 강의 대상
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70acf037-34b6-4394-a0d3-ed38fee772f6/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## vue 설치
 
@@ -186,7 +186,7 @@ $ sudo rm -rf [directory]
 
 - 총 4개의 컴포넌트로 이루어져 있음
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/afac94a7-ec3e-4006-ae2f-a232c02af96f/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## **파비콘, 아이콘, 폰트, 반응형 태그 설정하기**
 
@@ -202,15 +202,15 @@ $ sudo rm -rf [directory]
 
 - localstorage : https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b151539-c9a3-42d9-999f-788ab3a6d02a/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## 11_리팩토링
 
 - 재정비
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0676600-4eb3-48ee-9cce-effa0ca310b5/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fd0e8b0c-828d-4fcf-b353-44a7d8f22ecf/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
     - 프레젠트 컴포넌트 : 단순히 화면을 표현하는 컴포넌트 (input, list, footer)
     - 컴포넌트 : 앱의 동작, 비즈니스 로직, 데이터 조작 표현단 (app)
@@ -324,101 +324,101 @@ toggleComplete(index) {
     
     - 화면 : default heaer가 아닌 custom header가 출력됨
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/936441b9-d502-47fb-b2c0-058db547024b/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
 
 ## 18_**트렌지션 소개 및 구현**
 
 - https://vuejs.org/v2/guide/transitions.html#List-Entering-Leaving-Transitions
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6d97f355-355f-4be7-b184-c6c9b9df75bd/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
     - List를 추가했을 때, 보다 부드럽게 들어가고, 지울때도 부드럽게 지워짐
 
 ## ES6
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b4082ee-e61a-48e7-a742-c9563c7b2c5e/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - https://babeljs.io/
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8682a855-9eb8-40f7-852a-4f7a62bfefa7/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - ES6를 사용하면 시간상 효율적이고, 빠르게 프로토타이핑 할 수 있고, 빠르게 재개발 할 수 있으며, 개발자 스스로가 편해짐
 
 ## ES6란?
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c720b217-6123-4580-a345-c3ab7cb88d73/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - ES6는 모든 브라우저에서 지원되는 언어는 아님
 - 그래서, BABEL로 최대한 트랜스파일링(호환 가능한 ES5로 변환하는 컴파일링)해야 함
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0475c302-b5ef-4b13-b12c-fcb318fca3d1/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - vue CLI를 이용해서 프로젝트 구성하기 때문에,  webpack.config 등을 설정할 필요가 없지만, 무슨 기능을 하는지는 알고 있어야함.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ec70615d-7802-4731-8944-6cc7fbeeb2f6/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - `위쪽`이 ES6 문법 → `아래쪽` 브라우저가 호환 가능한 ES5문법으로  변환
 
 ## const & let
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d01d1e7a-f174-4ea8-abe3-54512c62402a/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 기존 js가 가진 유연함, 혹은 애매모호함을 미연에 방지함.
 - const 는 값 재할당 불가
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/867b3944-0aa9-4a56-baf4-19bf2f342505/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
 - let은 값 재할당 가능
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c63efb33-7832-4c9d-86c5-8ec97a300bbb/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
 
 ## **[ES5의 주요 특징]변수 스코프와 호이스팅**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e3a8d5b-8d93-4556-9ece-3e6c62833c20/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - for문 안에서 var i를 선언했을 때, i는 전역변수가 됨
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7c639842-f5c5-4e60-9280-b94c0b981756/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - Hoist : 끌어올려진다
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/19e5d6a7-da50-49cd-a4dd-f99f1e63fafb/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
 - 함수 표현식 X, 함수 선언문과 변수만 메모리 공간 확도 먼저 됨
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ba704472-6cd4-4339-81f8-d0188de88edb/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 위 코드는 오류가 나지 않음
     - 1순위 - var i, function이 위로 끌어올려짐
     - 2순위 - sum, i = 10 할당하는 것은 맨 마지막에 이루어짐
 - 결론적으로, 위 코드는 아래처럼 됨
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eec616db-beec-47d1-bf27-41c692029318/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## **const와 let 추가 설명 및 정리**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1dc720e7-54cf-4bc5-a2f0-ce5f49b99bf2/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - for문 안에서 선언한 let i는 for문 밖에서 접근 불가
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9360f857-42fe-4188-8490-bd7f19cef529/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - const : 문자열은 재할당 불가이나, 객체의 프로퍼티나 배열은 재할당 가능
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6e13bba-668f-4789-98b5-04d288f3d1fe/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44e2f285-70db-470b-9c37-d436a4082272/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/90733a3c-2e94-4083-aef6-6cf43a0d63ae/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - let x, const x는 다른 메모리 공간을 가지고 있으므로, 둘은 충돌이 나지 않음
 
 ## **화살표 함수 소개 및 설명**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f87edf7a-3740-46ec-961f-3c2a225c13fb/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ```jsx
 // ES5 : function
@@ -427,23 +427,23 @@ function () {}
 () => {}
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/631c7a5a-377f-44e0-818a-6bd4c694a7d8/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 실습 : [BABEL홈페이지](https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact%2Cstage-2&prettier=false&targets=&version=7.16.6&externalPlugins=&assumptions=%7B%7D)
 
 ## **속성 메서드의 축약 특징 설명**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a41f546b-88e8-499f-a008-d055fac7507e/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59775435-14c0-43db-a4ee-6d68d2e88825/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## **속성명의 축약 특징 설명**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3f0ce3ce-0938-4607-ad13-5e400f02758d/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## 모듈
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1f5225d5-cde4-440a-bcb3-17098c0fd1a3/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - ES5 기준 모듈 기능이 없었음 → Common js를 가져다 써서 모듈을 사용했음
 - 모듈 : 특정 기능을 시행하는 한 단위, 덩어리
@@ -451,60 +451,60 @@ function () {}
     - 파일별로 스코프를 가져감
     - import 를 할 때 export가 실행됨
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0d74ffc7-4c90-45cd-a723-78d0122fe572/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - default : 한 개 파일에서 하나만 export 됨 → 다른 것들이 쓸데없이 import되지 않게 함 ⇒ 모듈화(encapsulation)
 
 ## Vuex - 상태관리 라이브러리
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e03f8891-8068-4522-8682-3ccd04ae59e8/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 수많은 컴포넌트를 효율적으로 관리
 - 리액트(flux 패턴), 앵귤러를 답습, 장점을 결합하는 과정에서 생긴 형제 프레임워크
 - state(`data`), getters(`computed`), mutations(`sync method`), actions(`async method`)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/843836b5-4410-46e4-9f7d-f15e9218a8ab/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## Vuex란?
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f68be9b2-351d-45c1-9d7e-f2a6fdff5c87/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 앱이 커졌을 때, 관리할 수 있는 효과적인 방법
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/649763ea-91a2-41ab-8c74-a82950cd1800/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 페이스북 개발자들이 MVC패턴, 리액트로 개발하다가 만들어냄
 - 전체적 앱의 흐름을 추적하기 위함
 - Unidirectional data flow : 모든 데이터 흐름이 한 방향으로만 움직임
 - Dispatcher : 모델을 바꾸기 위한 역할 딱 하나 있음.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6f486ded-cf6f-42ce-afc1-2ca5a7f182c4/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8068512-fe22-47f7-bb0e-81045bcc6c13/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 데이터의 흐름을 추적할 수 없음 → 어떤 버그가 생기는지 확인할 수 없음.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/77cc8d27-176b-4c23-828a-7cdbddc3a35e/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 데이터의 흐름을 정형화시켜 향후에 발생할 수 있는 문제점 방지
 - store = model
 
 ## **Vuex가 필요한 이유, Vuex 컨셉, Vuex 구조**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dece6e3b-28fa-4752-b766-2a5b081f1611/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 만약 porps를 사용한다면, 코드가 복잡해짐
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/409b5f1a-b82e-4281-bb4e-55673165787a/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bc485fe4-8ea9-42ed-8b6e-87677b6437cc/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45802c24-bc37-49d6-abb3-11bc49d7440c/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - state : 상태
 - view(`템플릿 화면에서 add 버튼 클릭`) → action 발생(`addTodo메서드 발생`) → state 변경됨(`this.item.push(’item’)`)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/02b80cfa-0ae7-4017-b933-6ec096ffd618/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - 시작점 : vue components
 - 흐름 순서 :
@@ -523,7 +523,7 @@ function () {}
 
 - EX6로 설치
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f29ad12c-746b-437b-bafc-e224decac22a/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - vuex는 보통 store라고 하는데, 관행적으로 저장하는 폴더가 있음 → /src/store/store.js
 - store.js
@@ -539,26 +539,26 @@ Vue.use(Vuex); // use vue plugin
 
 ## **state와 getters 소개**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c9995522-a1f8-473e-8a6f-fe6cdcdb868d/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ddd2b809-a039-4f42-a661-691679287f82/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/beef26b4-4f58-4a84-92a2-90e56bfcc11f/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## 21_**[리팩토링] state 속성 적용**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/abac1357-a5d7-4b5d-8c14-ec3f1489c7f1/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd01a405-5dce-48eb-8ced-724216d5e4ca/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## **mutations와 commit() 형식 소개**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1519f50f-52b3-416d-b1cb-7d1531f1c2d4/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - mutation의 첫번째 인자는 무조건 state
 - 20 = anotherNum
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c231038-d7a3-4618-a746-c6be6c8419fb/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - payload : 관행상 이런 이름으로 사용
 
@@ -568,35 +568,35 @@ Vue.use(Vuex); // use vue plugin
 
 ## **왜 mutations로 상태를 변경해야 하는가?**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7fa10238-6998-4063-91f9-420aee2ef026/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/89fe9fe5-8ef3-4ad0-8b8e-c6fcf777528b/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - `vue components` → (commit) → `mutation` → (mutate) → `state` : mutation은 state의 값을 변경하기 위함
 - `Devtools(개발자도구)`로 state값을 확인할 수 있음
 
 ## actions 소개 및 예제
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8a6f2e11-d42c-4e91-a18e-6a37795cc91f/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - context : actions에서 mutation을 접근할 수 있는데, 접근할 수 있는 경로
 - 즉, actions는 mutation에게 신호를 보내는 역할
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8fd73819-ade7-4b46-a1bd-43d994192ede/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a93ff6dc-4a00-4d50-b7cb-8d7fcef4f16e/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## **왜 actions에 비동기 로직을 선언해야 하는가?**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/42b3d2ab-bf80-4a1a-a2cc-b485546dbce9/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - actions에서 비동기 메서드가 처리되면, 무조건 mutation으로 들고와서 값을 처리 → 규격화됨
 
 ## **헬퍼 함수 및 ES6 Spread 연산자 소개**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a7434192-f658-4403-921c-08aff0b1cf64/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3eda5693-9f42-4b4a-a424-4259f8bd31a6/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 - this.$store.state.num
 - this.$store.getters.countedNum
@@ -605,9 +605,9 @@ Vue.use(Vuex); // use vue plugin
 
 ## **mapState, mapGetters 소개 및 ES6 Spread 연산자 쓰는 이유**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3e43494-db28-44b7-bcfc-05d79c8675d0/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5059de9c-0608-4478-b16a-d2cc7fef54ad/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## 23_**[리팩토링] getters와 mapGetters 적용하기**
 
@@ -615,11 +615,11 @@ Vue.use(Vuex); // use vue plugin
 
 ## **[리팩토링 & 퀴즈] mapMutations 적용 및 퀴즈**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16ab917d-888e-427f-8f56-4d0e3f0a3f1b/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/11ba29e0-23d4-487c-a7c0-a0cfc556d513/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03ed2d36-e13f-433d-b3ae-52b6f49bdd51/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## 24_**[리팩토링 & 퀴즈] mapMutations 적용 및 퀴즈**
 
@@ -634,15 +634,15 @@ Vue.use(Vuex); // use vue plugin
 
 - getters가 3개 있을 때,
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/86e3ca0a-18c7-477e-a2fa-e530895e4471/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
 - 이걸 쓰기 위해 접근할 때 하나하나 가져와서 사용하면 번거로움
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eb038c36-063b-4093-83db-61b24de83ce4/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
 - map helper 함수를 사용하면 타이핑 시간을 줄일 수 있음
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/938096ac-645c-410b-8ac5-c714a0fb89ec/Untitled.png)
+    ![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
     
 
 ## **뷰엑스로 리팩토링한 애플리케이션 구조 분석 및 정리**
@@ -656,13 +656,13 @@ Vue.use(Vuex); // use vue plugin
 
 ## 25_**스토어 속성 모듈화 방법**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ddb74167-6142-4218-9e94-5ff861a0dda9/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5131e349-5d79-44ca-b570-c5ca0962eb86/Untitled.png)
+![Untitled](vue-todo-cli3/src/assets/vue-lesson.png)
 
 ## 26_**스토어 모듈화 방법**
 
-![[또 다른 예시](https://theheydaze.tistory.com/407)](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bc633f4a-1937-46b6-8698-e24e2137fa26/Untitled.png)
+![[또 다른 예시](https://theheydaze.tistory.com/407)](vue-todo-cli3/src/assets/vue-lesson.png)
 
 [또 다른 예시](https://theheydaze.tistory.com/407)
 
