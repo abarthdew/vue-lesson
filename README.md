@@ -46,13 +46,10 @@ sudo apt install git-all
 jonah@jonah-15U530-LH10K:~/Documents/vue-lesson$ npm install @vue/cli
 ```
 
-```shell
-⚠️ npm install -g @vue.cli : 글로벌로 설치하면 에러남
+- ⚠️ npm install -g @vue.cli : 글로벌로 설치하면 에러남
 `npm WARN checkPermissions Missing write access to /usr/local/lib`
 권한 에러인 듯한데 귀찮아서 전역 옵션 뺌
 [오류 출처](https://superbaik.tistory.com/entry/Error-npm-%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%84%A4%EC%B9%98-%EA%B4%80%EB%A0%A8-%EC%97%90%EB%9F%AC)
-
-```
 
 ```bash
 jonah@jonah-15U530-LH10K:~/Documents/vue-lesson$ vue -version
@@ -138,10 +135,10 @@ Vue CLI v4.5.15
   Manually select features
 ```
 
-```shell
+<aside>
 📌 [vue/cli2, 3 차이점](https://blog.metafor.kr/201)
 
-```
+</aside>
 
 → 에러
 
@@ -625,10 +622,10 @@ Vue.use(Vuex); // use vue plugin
 
 - 생략
 
-```shell
+<aside>
 💡 **getters는 computed와 속성이 같으므로 computed에, mutations는 method와 속성이 같으므로 method에 helper함수를 선언!**
 
-```
+</aside>
 
 ## **헬퍼 함수가 주는 간편함**
 
