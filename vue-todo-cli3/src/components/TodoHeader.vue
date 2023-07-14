@@ -5,9 +5,9 @@
 </template>
 
 <style scoped>
-  h1 { 
-    color: mediumseagreen;
-    font-weight: bold;
-    margin: 10px;
-    }
+h1 {
+  color: mediumseagreen;
+  font-weight: bold;
+  margin: 10px;
+}
 </style>

@@ -12,6 +12,7 @@ import TodoFooter from './components/TodoFooter.vue'
 import TodoHeader from './components/TodoHeader.vue'
 import TodoInput from './components/TodoInput.vue'
 import TodoList from './components/TodoList.vue'
+
 export default {
   name: 'App',
   components: {
@@ -27,10 +28,12 @@ export default {
 input {
   border-style: groove;
 }
+
 button {
   border-style: groove;
 }
+
 .shadow {
-  box-shadow: 5px 10px 10px rgba(0,0,0,0.03);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
 }
 </style>

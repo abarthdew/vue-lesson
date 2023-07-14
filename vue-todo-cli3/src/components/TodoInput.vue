@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo" />
+    <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo"/>
     <button v-on:click="addTodo">
       <i class="fa fa-plus"></i>
     </button>
@@ -22,31 +22,32 @@
 
 <script>
 import Modal from './common/Modal.vue';
-  export default {
-    components: {
-      Modal,
-    },
-    data() {
-      return {
-        newTodoItem: '',
-        showModal: false,
+
+export default {
+  components: {
+    Modal,
+  },
+  data() {
+    return {
+      newTodoItem: '',
+      showModal: false,
+    }
+  },
+  methods: {
+    addTodo() {
+      if (this.newTodoItem !== '') {
+        this.$store.commit('addOneItem', this.newTodoItem);
+        this.clearInput();
+      } else {
+        this.showModal = !this.showModal;
       }
     },
-    methods: {
-      addTodo() {
-        if (this.newTodoItem !== '') {
-          this.$store.commit('addOneItem', this.newTodoItem);
-          this.clearInput();
-        } else {
-          this.showModal = !this.showModal;
-        }
-      },
-      clearInput() {
-        this.newTodoItem = '';
-      },
-      closeModal() {
-        this.showModal = false;
-      }
+    clearInput() {
+      this.newTodoItem = '';
     },
-  }
+    closeModal() {
+      this.showModal = false;
+    }
+  },
+}
 </script>

@@ -1,34 +1,34 @@
 <template>
-    <transition name="modal">
-        <div class="modal-mask">
-          <div class="modal-wrapper">
-            <div class="modal-container">
-            <!--MODAL HEADER-->
-              <div class="modal-header">
-                <slot name="header">
-                  default header
-                </slot>
-              </div>
-            <!--MODAL BODY-->
-              <div class="modal-body">
-                <slot name="body">
-                  default body
-                </slot>
-              </div>
-            <!--MODAL FOOTER-->
-              <div class="modal-footer">
-                <slot name="footer">
-                  default footer
-                  <button class="modal-default-button" @click="$emit('close')">
-                    OK
-                  </button>
-                </slot>
-                <!--THIS slot PART: you can refactor this <slot>part</slot> on TodoInput.vue(where slot implemented)-->
-              </div>
-            </div>
+  <transition name="modal">
+    <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-container">
+          <!--MODAL HEADER-->
+          <div class="modal-header">
+            <slot name="header">
+              default header
+            </slot>
+          </div>
+          <!--MODAL BODY-->
+          <div class="modal-body">
+            <slot name="body">
+              default body
+            </slot>
+          </div>
+          <!--MODAL FOOTER-->
+          <div class="modal-footer">
+            <slot name="footer">
+              default footer
+              <button class="modal-default-button" @click="$emit('close')">
+                OK
+              </button>
+            </slot>
+            <!--THIS slot PART: you can refactor this <slot>part</slot> on TodoInput.vue(where slot implemented)-->
           </div>
         </div>
-      </transition>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <style>

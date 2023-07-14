@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition-group name="list" tag="ul">
-      <li 
+      <li
         v-for="(todoItem, index) in storedTodoItems"
         :key="todoItem.item"
         style="margin: 10px;"
@@ -10,7 +10,7 @@
           class="fas fa-check"
           @click="toggleCompleteOneItem(index)">
         </button>
-        {{todoItem.item}}
+        {{ todoItem.item }}
         <button @click="removeOneItem({todoItem, index})">
           <i class="fa-trash-alt fas"></i>
         </button>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import {mapGetters, mapMutations} from 'vuex';
 
 export default {
   computed: {
@@ -41,14 +41,18 @@ export default {
 .checkBtn {
   background: #ddd;
 }
+
 .list-item {
   display: inline-block;
   margin-right: 10px;
 }
+
 .list-enter-active, .list-leave-active {
   transition: all 1s;
 }
-.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */
+{
   opacity: 0;
   transform: translateY(30px);
 }

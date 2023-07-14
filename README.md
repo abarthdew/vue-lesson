@@ -1,8 +1,8 @@
 ---
 title: Vue Lesson
 date: 2021-12-06
-categories: [Front, Vue]
-tags: [Front, Vue]
+categories: [ Front, Vue ]
+tags: [ Front, Vue ]
 ---
 
 # [vue-lesson](https://github.com/abarthdew/vue-lesson){:target="_blank"}
@@ -141,6 +141,7 @@ Vue CLI v4.5.15
   Default (Vue 3) ([Vue 3] babel, eslint) 
   Manually select features
 ```
+
 > 📌 [vue/cli2, 3 차이점](https://blog.metafor.kr/201)
 
 → 에러
@@ -207,11 +208,11 @@ $ sudo rm -rf [directory]
 ## 11_리팩토링
 
 - 재정비
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(8).png)
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(9).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(8).png)
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(9).png)
+
     - 프레젠트 컴포넌트 : 단순히 화면을 표현하는 컴포넌트 (input, list, footer)
     - 컴포넌트 : 앱의 동작, 비즈니스 로직, 데이터 조작 표현단 (app)
     - 즉, 전체적 컴포넌트에서 사용할 데이터를 app 한군데로 몰아넣고, 여기서 데이터 조작이 발생.
@@ -221,6 +222,7 @@ $ sudo rm -rf [directory]
 - app.vue에 메서드 모음(컴포넌트 컨테이너)
 
 ```html
+
 <todo-input @addTodoItem="addOneItem"/>
 <todo-list
   :propsData="todoItems"
@@ -231,16 +233,23 @@ $ sudo rm -rf [directory]
 ```
 
 ```jsx
-addOneItem (todoItem) {
+addOneItem(todoItem)
+{
   // ...
-}},
-removeOneItem (todoItem, index) {
-  // ...
+}
 },
-toggleCompleteOneItem (index) {
+removeOneItem(todoItem, index)
+{
   // ...
-},
-clearAllItems() {
+}
+,
+toggleCompleteOneItem(index)
+{
+  // ...
+}
+,
+clearAllItems()
+{
   // ...
 }
 ```
@@ -249,14 +258,18 @@ clearAllItems() {
 
 ```jsx
 // input
-addTodo() {
+addTodo()
+{
   this.$emit('addTodoItem', this.newTodoItem);
 }
 // list
-removeTodo(todoItem, index) {
+removeTodo(todoItem, index)
+{
   this.$emit('removeItem', todoItem, index);
-},
-toggleComplete(index) {
+}
+,
+toggleComplete(index)
+{
   this.$emit('toggleCompleteItem', index);
 }
 ```
@@ -266,11 +279,11 @@ toggleComplete(index) {
 - 어떤 것들이 수정되고, 삭제됐는지 육안으로 구별이 어려움 → vue 라이브러리에서 제공하는 트랜지션, 애니메이션을 이용해 문제점 해결하기
 - 모달 : https://vuejs.org/v2/examples/modal.html
 - x-template : ES5 기준 / 탬플릿을 모듈화한 형태를 사용할 때 씀
-    
+
     ```html
     <script type="text/x-template" id="modal-template">
     ```
-    
+
     ```jsx
     // register modal component
     Vue.component("modal", {
@@ -278,10 +291,10 @@ toggleComplete(index) {
     });
     // #modal-template id를 가진 x-template을 찾아 modal 컴포넌트로 만들겠다
     ```
-    
+
 - Slot 태그 : <slot>태그를 써 놓으면 Modal.vue가 사용되는 컴포넌트에서 재정의 가능
     - Modal.vue
-    
+
     ```html
     <!--MODAL HEADER-->
       <div class="modal-header">
@@ -306,9 +319,9 @@ toggleComplete(index) {
         <!--THIS slot PART: you can refactor this <slot>part</slot> on TodoInput.vue(where it is slot implemented)-->
       </div>
     ```
-    
+
     - Input.vue
-    
+
     ```html
     <modal v-if="showModal" @close="showModal = false">
       <!--
@@ -321,18 +334,17 @@ toggleComplete(index) {
       <!-- slot: refactoring  specific component or any part. so, you may reuse UI parts in any compnent-->
     </modal>
     ```
-    
+
     - 화면 : default heaer가 아닌 custom header가 출력됨
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(10).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(10).png)
 
 ## 18_**트렌지션 소개 및 구현**
 
 - https://vuejs.org/v2/guide/transitions.html#List-Entering-Leaving-Transitions
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(11).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(11).png)
+
     - List를 추가했을 때, 보다 부드럽게 들어가고, 지울때도 부드럽게 지워짐
 
 ## ES6
@@ -354,11 +366,11 @@ toggleComplete(index) {
 
 ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(15).png)
 
-- vue CLI를 이용해서 프로젝트 구성하기 때문에,  webpack.config 등을 설정할 필요가 없지만, 무슨 기능을 하는지는 알고 있어야함.
+- vue CLI를 이용해서 프로젝트 구성하기 때문에, webpack.config 등을 설정할 필요가 없지만, 무슨 기능을 하는지는 알고 있어야함.
 
 ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(16).png)
 
-- `위쪽`이 ES6 문법 → `아래쪽` 브라우저가 호환 가능한 ES5문법으로  변환
+- `위쪽`이 ES6 문법 → `아래쪽` 브라우저가 호환 가능한 ES5문법으로 변환
 
 ## const & let
 
@@ -366,13 +378,12 @@ toggleComplete(index) {
 
 - 기존 js가 가진 유연함, 혹은 애매모호함을 미연에 방지함.
 - const 는 값 재할당 불가
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(18).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(18).png)
+
 - let은 값 재할당 가능
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(19).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(19).png)
 
 ## **[ES5의 주요 특징]변수 스코프와 호이스팅**
 
@@ -383,9 +394,9 @@ toggleComplete(index) {
 ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(11).png)
 
 - Hoist : 끌어올려진다
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(22).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(22).png)
+
 - 함수 표현식 X, 함수 선언문과 변수만 메모리 공간 확도 먼저 됨
 
 ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(23).png)
@@ -406,9 +417,8 @@ toggleComplete(index) {
 ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(26).png)
 
 - const : 문자열은 재할당 불가이나, 객체의 프로퍼티나 배열은 재할당 가능
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(27).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(27).png)
 
 ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(28).png)
 
@@ -422,14 +432,18 @@ toggleComplete(index) {
 
 ```jsx
 // ES5 : function
-function () {}
+function () {
+}
+
 // EX6 : arrow
-() => {}
+() => {
+}
 ```
 
 ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(31).png)
 
-- 실습 : [BABEL홈페이지](https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact%2Cstage-2&prettier=false&targets=&version=7.16.6&externalPlugins=&assumptions=%7B%7D)
+-
+실습 : [BABEL홈페이지](https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact%2Cstage-2&prettier=false&targets=&version=7.16.6&externalPlugins=&assumptions=%7B%7D)
 
 ## **속성 메서드의 축약 특징 설명**
 
@@ -509,13 +523,13 @@ function () {}
 - 시작점 : vue components
 - 흐름 순서 :
     - 컴포넌트
-        
-        → 비동기로직(action) : 비동기 메서드 로직만 처리, data를 바꾸지는 않음. mutation 콜만 할 수 있음.
-        
-        → 동기로직(mutation) : 동기 메서드. 실제 data는 이 단계에서 바꿈.
-        
-        → 상태(state)
-        
+
+      → 비동기로직(action) : 비동기 메서드 로직만 처리, data를 바꾸지는 않음. mutation 콜만 할 수 있음.
+
+      → 동기로직(mutation) : 동기 메서드. 실제 data는 이 단계에서 바꿈.
+
+      → 상태(state)
+
 - [비동기, 동기에 대한 개념](https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
 - [자바스크립트 Promise 쉽게 이해하기](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
 
@@ -630,26 +644,24 @@ Vue.use(Vuex); // use vue plugin
 ## **헬퍼 함수가 주는 간편함**
 
 - getters가 3개 있을 때,
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(69).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(69).png)
+
 - 이걸 쓰기 위해 접근할 때 하나하나 가져와서 사용하면 번거로움
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(70).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(70).png)
+
 - map helper 함수를 사용하면 타이핑 시간을 줄일 수 있음
-    
-    ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(71).png)
-    
+
+  ![Untitled](https://raw.githubusercontent.com/abarthdew/vue-lesson/main/vue-todo-cli3/src/assets/vue-lesson(71).png)
 
 ## **뷰엑스로 리팩토링한 애플리케이션 구조 분석 및 정리**
 
 - app : 하위 컴포넌트만 등록되어 있음
 - store : 기존 app에 있던 메서드 등 코드 기능들이 전부 store에서 요청
 - list, input, footer : store에서 필요한 기능들을 불러와서 호출
-    
-    ⇒ 하지만 store에 모든 메서드를 두게 되면 추적이 힘들어지므로, 모듈화, 분리가 필요함. (modules를 이용해 구조화)
-    
+
+  ⇒ 하지만 store에 모든 메서드를 두게 되면 추적이 힘들어지므로, 모듈화, 분리가 필요함. (modules를 이용해 구조화)
 
 ## 25_**스토어 속성 모듈화 방법**
 
@@ -688,9 +700,8 @@ Error: EACCES: permission denied, rename '/home/jonah/Documents/vue-lesson/vue-t
 ```
 
 - 해당 디렉토리에 대한 권한 설정을 해 줌(사용자 계정)
-    
-    → 귀찮아서 전체 디렉토리 권한 허용함
-    
+
+  → 귀찮아서 전체 디렉토리 권한 허용함
 
 ```bash
 jonah@jonah-15U530-LH10K:~$ ls -la /usr/local/lib/node_modules
@@ -715,9 +726,11 @@ jonah@jonah-15U530-LH10K:~$ sudo chown -R jonah *
 
 - https://velog.io/@ywoosang/Node.js-%EC%84%A4%EC%B9%98
 - https://github.com/ABarthDew/vue-lesson
-- vscode git 권한설정 : https://hyeo-noo.tistory.com/184
+- vscode git 권한설정 :https://hyeo-noo.tistory.com/184
 - 크롬 플러그인 설정 : https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd/related?hl=ko
-- npm install -g option error : [https://superbaik.tistory.com/entry/Error-npm-글로벌-설치-관련-에러](https://superbaik.tistory.com/entry/Error-npm-%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%84%A4%EC%B9%98-%EA%B4%80%EB%A0%A8-%EC%97%90%EB%9F%AC)
+- npm install -g option
+  error : [https://superbaik.tistory.com/entry/Error-npm-글로벌-설치-관련-에러](https://superbaik.tistory.com/entry/Error-npm-%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%84%A4%EC%B9%98-%EA%B4%80%EB%A0%A8-%EC%97%90%EB%9F%AC)
 - sudo npm -g install @vue/cli : https://askubuntu.com/questions/1139728/how-do-i-install-vue-cli-in-ubuntu
 - vue/cli2, 3 차이점 : https://blog.metafor.kr/201
-- vue create error : https://stackoverflow.com/questions/47545940/when-i-run-npm-install-it-returns-with-err-code-eintegrity-npm-5-3-0
+- vue create
+  error : https://stackoverflow.com/questions/47545940/when-i-run-npm-install-it-returns-with-err-code-eintegrity-npm-5-3-0
